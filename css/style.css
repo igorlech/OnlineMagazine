@@ -1,0 +1,756 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* navigation */
+.navigation {
+	font-family: GlacialIndifference-Regular;
+	background-color: #993300;
+	position: sticky;
+	top: 0;
+}
+.iconlabel{
+    display: inline-block;
+    color: #ffffff;
+    background: #993300;
+    font-style: normal;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+.menuitem{
+	display: block;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+.menu-container,
+.icon {
+	display: none;
+}
+.navigation input:checked ~ .menu-container{
+	display: block;
+}
+.drumlogo{
+	width: 55px;
+	position: absolute;
+	top: 0;
+	left: 30px;
+}
+@media screen and (min-width: 42rem){
+  .iconlabel, 
+  .icon{
+	  display: none;
+  }
+  .navigation {
+	  font-family: GlacialIndifference-Regular;
+	  display: flex;
+	  height: 5rem;
+  }
+  .menu-container {
+	  display: flex;
+	  align-items: center;
+	  flex-wrap: wrap;
+  }
+
+  .menuitem {
+	  font-size: 1.5rem;
+	  margin-left: 10px;
+	  width: 270px;
+  }
+
+  .menuitem:hover {
+	  background: #999900;
+  }
+
+  .drumlogo {
+	  width: 120px;
+	  position: absolute;
+	  top: 0;
+	  left: 80rem;
+  }
+}
+/* body codes */
+/* main page (mostly */
+label {
+	color: white;
+}
+.snare-image {
+	width: 10rem;
+	margin-top: 1.5rem;
+}
+#hiddensnare {
+	display: none;
+}
+.headline-main {
+	width: 100%;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	justify-content: center;
+}
+#h1index1 {
+	font-size: 4rem;
+	font-family: GlacialIndifference-Bold;
+	font-weight: 800;
+	text-align: center;
+	margin-top: 2rem;
+}
+#h1index2 {
+	font-size: 2.5rem;
+	font-family: GlacialIndifference-Regular;
+	text-align: center;
+}
+.drumkit-image {
+	width: 100%;
+	padding-top: 15px;
+}
+.section {
+	display: flex;
+	font-family: GlacialIndifference-Regular;
+	text-align: justify;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+.article-headline {
+	font-family: GlacialIndifference-Bold;
+	padding: 5px;
+}
+.article-content {
+	font-size: 1rem;
+	margin-top: 0.8rem;
+	margin-bottom: 1rem;
+}
+.article-headline {
+	text-align: center;
+	font-size: 1.2rem;
+}
+.subpages {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+.subpages-image {
+	width: 15rem;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.subpageheadline {
+	font-family: GlacialIndifference-Bold;
+	font-size: 1.1rem;
+}
+.subinfo {
+	font-family: GlacialIndifference-Regular;
+	margin-bottom: 1.5rem;
+	padding-top: 3px;
+	font-size: 0.8rem;
+}
+.info {
+	text-align: center;
+}
+b {
+	font-weight: 600;
+}
+.subpages-image:hover::before {
+	transform: scale(1.1);
+  	box-shadow: 0 0 15px #000000;
+}
+.subpages-image:hover {
+	color: #000000;
+  	box-shadow: 0 0 5px #000000;
+  	text-shadow: 0 0 5px #000000;
+}
+@media only screen and (min-width: 42rem) {
+	.snare-image {
+		width: 50rem;
+		position: relative;
+		left: -150px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	#h1index1 {
+		font-size: 10rem;
+		margin-right: 10rem;
+	}
+	#h1index2 {
+		font-size: 9rem;
+		margin-right: 10rem;
+	}
+	#hiddensnare {
+		display: none;
+	}
+	.headline-main {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+	.article-content {
+		font-size: 1.5rem;
+		margin-right: 40px;
+		margin-left: 40px;
+		margin-bottom: 20px;
+	}
+	.article-headline {
+		font-size: 3rem;
+		margin: 20px;
+	}
+	.drumkit-image {
+		width: 50rem;
+		padding-top: 50px;
+	}
+	.drumkitimageclass{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.subpages {
+		flex-direction: row;
+	}
+	.subpages-image {
+		width: 22rem;
+	}
+	.info {
+		text-align: left;
+		margin-left: 0.5rem;
+	}
+	.subpageheadline {
+		font-size: 1.4rem;
+	}
+	.subinfo {
+		font-size: 1rem;
+	}
+	#specialparagraph {
+		margin-left: 20rem;
+		margin-right: 20rem;
+	}
+	#specialparagraph2 {
+		margin-left: 20rem;
+		margin-right: 20rem;
+	}
+}
+/* About Drums subpage */
+.headline-about {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+.behind-image {
+	width: 8rem;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#h1about {
+	font-family: GlacialIndifference-Bold;
+	font-size: 3rem;
+	margin-left: 2px;
+	text-align: center;
+}
+.overlook {
+	font-family: GlacialIndifference-Bold;
+	font-size: 1.3rem;
+	text-align: justify;
+	margin-top: 8px;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+.byline {
+	font-family: GlacialIndifference-Regular;
+	font-size: 0.8rem;
+	margin-left: 8px;
+	text-align: center;
+}
+.cajon-image {
+	width: 15rem;
+	margin-top: 10px;
+}
+.explanation-image {
+	width: 20rem;
+}
+.playing-image {
+	width: 15rem;
+	margin-top: 10px;
+}
+.paragraph {
+	font-family: itc-galliard,serif;
+	font-weight: 400;
+	font-style: normal;
+	text-align: justify;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	line-height: 1.5;
+}
+ul {
+	list-style-type: disc;
+	margin: 0;
+	padding: 1rem;
+	line-height: 1.3;
+}
+li {
+	font-family: itc-galliard,serif;
+	font-weight: 400;
+	font-style: normal;
+	text-align: justify;
+	margin-left: 10px;
+	margin-right: 7px;
+	padding: 3px;
+}
+.imageholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.cajonclass {
+	display: flex;
+	justify-content: center;
+}
+.aboutcajon {
+	font-family: itc-galliard, serif;
+	font-weight: 400;
+	font-style: italic;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	margin-bottom: 15px;
+	font-size: 1.1rem;
+}
+@media only screen and (min-width: 42rem){
+	#h1about {
+		font-size: 10rem;
+		margin-right: 6rem;
+	}
+	.headline-about {
+		justify-content: center;
+		margin-bottom: 2rem;
+	}
+	.behind-image {
+		width: 30rem;
+	}
+	.overlook {
+		font-size: 3rem;
+		margin-left: 8rem;
+		margin-right: 8rem;
+		margin-bottom: 0.5rem;
+	}
+	.byline {
+		font-size: 1.5rem;
+		margin-left: 8rem;
+	}
+	.paragraph {
+		font-weight: 500;
+		font-size: 1.3rem;
+		margin-left: 5rem;
+		margin-right: 5rem;
+	}
+	li {
+		font-weight: 500;
+		font-size: 1.3rem;
+	}
+	ul {
+		margin-left: 5rem;
+	}
+	.explanation-image {
+		width: 50rem;
+	}
+	.article-headline {
+		font-size: 2rem;
+	}
+	.playing-image {
+		width: 45rem;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+	.cajon-image {
+		width: 40rem;
+		margin-top: 2rem;
+		margin-bottom: 0.5rem;
+	}
+}
+/* How To Become A Drummer subpage */
+.headline-htbad {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#h1htbad {
+	font-family: GlacialIndifference-Bold;
+	text-align: center;
+	font-size: 2rem;
+}
+#h1htbad2 {
+	font-family: GlacialIndifference-Regular;
+	text-align: center;
+	font-size: 2rem;
+}
+.imgnumber {
+	width: 5rem;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+.listcontent {
+	text-align: justify;
+	margin-top: 10px;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-bottom: 20px;
+}
+.htbadparagraph {
+	font-family: itc-galliard,serif;
+	font-weight: 400;
+	font-style: normal;
+	text-align: justify;
+	margin-right: 10px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	line-height: 1.5;
+}
+.drummer-image {
+	width: 15rem;
+	margin-top: 15px;
+}
+.festival-image {
+	width: 10rem;
+}
+.htbadimage {
+	display: flex;
+	justify-content: center;
+}
+.festivalpage {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+.festivalname {
+	font-family: GlacialIndifference-Regular;
+	margin-top: 5px;
+}
+.festival-image:hover::before {
+	transform: scale(1.1);
+  	box-shadow: 0 0 15px #000000;
+}
+.festival-image:hover {
+	color: #000000;
+  	box-shadow: 0 0 5px #000000;
+  	text-shadow: 0 0 5px #000000;
+}
+.here {
+	text-decoration: none;
+	color: black;
+	font-weight: 600;
+}
+@media only screen and (min-width: 42rem) {
+	.headline-htbad {
+		margin-bottom: 1rem;
+	}
+	#h1htbad {
+		font-size: 2rem;
+		margin-right: 4rem;
+		font-size: 7rem;
+	}
+	#h1htbad2 {
+		font-size: 2rem;
+		margin-left: 22rem;
+		font-size: 8rem;
+	}
+	.learninglist-row {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-bottom: 3rem;
+	}
+	.imgnumber {
+		width: 8rem;
+		margin-left: 17rem;
+		margin-right: 2rem;
+	}
+	.listcontent {
+		margin-right: 17rem;
+	}
+	.drummer-image {
+		width: 40rem;
+		margin-bottom: 2rem;
+	}
+	.festival-image {
+		width: 20rem;
+	}
+	.festivalname {
+		font-size: 2rem;
+		text-align: center;
+		margin-top: 10px;
+	}
+	.festivalpages {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin-bottom: 2rem;
+	}
+	.festivalpage {
+		margin-left: 5rem;
+		margin-right: 5rem;
+	}
+	#happytext {
+		text-align: center;
+		margin-bottom: 5rem;
+	}
+	.htbadparagraph {
+		font-weight: 500;
+		font-size: 1.3rem;
+	}
+}
+/* Lessons subpage */
+#h1lessons {
+	font-family: GlacialIndifference-Bold;
+	font-size: 3rem;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.cymbal-image {
+	width: 15rem;
+	margin-bottom: 10px;
+}
+.cymbaldiv {
+	display: flex;
+	justify-content: center;
+}
+.notes-image {
+	width: 20rem;
+}
+.drumnotes-container {
+	display: flex;
+	justify-content: center;
+}
+.videocontainer {
+	display: flex;
+	justify-content: center;
+}
+.video {
+	width: 18rem;
+	height: 12rem;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+}
+@media only screen and (min-width: 42rem) {
+	#h1lessons {
+		font-size: 10rem;
+		margin-top: 2.5rem;
+		margin-bottom: 2.5rem;
+	}
+	.cymbal-image {
+		width: 45rem;
+	}
+	.notes-image {
+		width: 50rem;
+		margin-bottom: 2rem;
+	}
+	.video {
+		width: 45rem;
+		height: 25rem;
+		margin-bottom: 2rem;
+	}
+}
+/* footer */
+.footer {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+	background-color: #993300;
+	height: 10.625rem;
+}
+.footer-logo {
+	width: 35px;
+    margin-top: 16px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.contact-icon {
+	width: 30px;
+    margin-top: 10px;
+	padding-bottom: 10px;
+}
+.footersection2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+.contact {
+	font-family: GlacialIndifference-Regular;
+	text-align: center;
+	color: white;
+}
+.mailcontact {
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+@media only screen and (min-width: 42rem) {
+    .footer{
+        flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+        height: 10rem;
+		margin-bottom:0;
+    }
+	.footer-logo{
+		width: 45px;
+		align-items: center;
+		margin-top: 2.5rem;
+		margin-left: 1.5rem;
+	}
+    .footersection {
+        height: 8.5rem;
+		margin-right: 3rem;
+		margin-left: 1rem;
+	}
+	.footersection2 {
+		display: flex;
+		flex-direction: row;
+		height: 8.5rem;
+		margin-right: 3rem;
+	}
+	.contact {
+		font-size: 1.5rem;
+	}
+	.contact-icon {
+		width: 40px;
+		margin: 1rem;
+	}
+	.mailcontact {
+		font-size: 1rem;
+	}
+
+}
+/* Animista additions */
+.text-focus-in {
+	-webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2021-10-20 10:36:45
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+ @-webkit-keyframes text-focus-in {
+	0% {
+	  -webkit-filter: blur(12px);
+			  filter: blur(12px);
+	  opacity: 0;
+	}
+	100% {
+	  -webkit-filter: blur(0px);
+			  filter: blur(0px);
+	  opacity: 1;
+	}
+  }
+  @keyframes text-focus-in {
+	0% {
+	  -webkit-filter: blur(12px);
+			  filter: blur(12px);
+	  opacity: 0;
+	}
+	100% {
+	  -webkit-filter: blur(0px);
+			  filter: blur(0px);
+	  opacity: 1;
+	}
+  }
+.shadow-drop-center {
+	-webkit-animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2021-10-20 10:38:26
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation shadow-drop-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes shadow-drop-center {
+	0% {
+	  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+			  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+	100% {
+	  -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+			  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+	}
+  }
+  @keyframes shadow-drop-center {
+	0% {
+	  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+			  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+	100% {
+	  -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+			  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+	}
+  }  
